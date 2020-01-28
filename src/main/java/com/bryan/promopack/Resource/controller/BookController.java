@@ -23,7 +23,7 @@ public class BookController {
         return ResponseEntity.ok().body(bookService.findAll());
     }
 
-    @GetMapping
+    @GetMapping("/byId")
     public ResponseEntity<Book> findById(@RequestParam(name="id") Integer id){
         return ResponseEntity.ok().body(bookService.findById(id));
     }
